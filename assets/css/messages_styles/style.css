@@ -1,0 +1,157 @@
+@import url('../variables_css/style.css');
+
+/*
+.success
+.error
+.alert
+.info
+*/
+
+body{
+    position: relative;
+}
+
+
+.msg {
+    position: absolute;
+    top: 20px;
+    right: -300px; /* Comienza fuera de la vista */
+    border: var(--border);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: slideIn 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+/* Definimos la animación con @keyframes */
+@keyframes slideIn {
+    from {
+        right: 10px; /* Punto de inicio fuera de la vista */
+    }
+    to {
+        right: 50px; /* Punto final en la vista */
+    }
+}
+
+
+.msg .left-content {
+    display: flex;
+    margin-right: 75px;
+    align-items: center;
+}
+
+.msg .left-content .container_icon{
+    background: #a9a9a9;
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.msg .left-content .container_icon::before{
+    content: '';
+    background: #cccccc;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.msg .left-content .container_icon i{
+    color: #000;
+    position: absolute;
+}
+
+.msg button{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    padding 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border-radius: 10px;
+}
+.msg button:hover {
+    background: #fff;
+    padding: 10px;
+}
+
+.msg span{
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+
+
+/*colores*/
+
+.message_success{
+    border: 1.5px solid rgba(72, 227, 55, 0.502);
+    background: rgba(20, 220, 90, 0.184);
+}
+.message_success .left-content .container_icon{
+    background: #0fc144;
+    box-shadow: 4px 4px 8px rgba(0, 255, 8, 0.4);
+}
+.message_success .left-content .container_icon::before{
+    background: #fff;
+}
+.message_success .left-content .container_icon i{
+    color: #0fc144;
+}
+
+
+
+
+
+
+
+
+.message_error{
+    border: 1.5px solid rgba(227, 55, 89, 0.502);
+    background: rgba(220, 20, 60, 0.184);
+}
+.message_error .left-content .container_icon{
+    background: #c10f32;
+    box-shadow: 4px 4px 8px rgba(227, 55, 90, 0.4);
+}
+.message_error .left-content .container_icon::before{
+    background: #fff;
+}
+.message_error .left-content .container_icon i{
+    color: #c10f32;
+}
+
+
+
+
+
+
+.message_alert{
+    border: 1.5px solid rgba(189, 136, 12, 0.405);
+    background: rgba(225, 186, 12, 0.184);
+}
+.message_alert .left-content .container_icon{
+    background: #f1c40f;
+    box-shadow: 4px 4px 8px rgba(197, 155, 4, 0.4);
+}
+.message_alert .left-content .container_icon::before{
+    background: #fff;
+}
+.message_alert .left-content .container_icon i{
+    color: #f1c40f;
+}
+
