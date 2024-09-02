@@ -49,26 +49,6 @@ class user{
         return $exect;
     }
 
-    //actualizar usuario
-    public function updateUser()
-    {
-
-    }
-
-
-
-    //eliminar usuario
-
-    public function deleteUser()
-    {
-
-    }
-
-
-
-
-
-
 
 
     //generar sesion del usuario
@@ -90,25 +70,17 @@ class user{
 
 
 
-
-
-
-
     //comprobar si existen cookies del usuario
 
     public static function getCookie(string $root)
     {
         if(isset($_COOKIE['user'])){ 
-            echo $user_id = $_COOKIE['user'];
+            return $user_id = $_COOKIE['user'];
         }else{   
             $user_id = '';
             return header("location:$root"."authentication/account.php");
         }
     }
-
-
-
-
 
 
     //destruir cookies

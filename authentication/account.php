@@ -1,8 +1,7 @@
 <?php
 
-include '../utils/class/conection.php';
-include '../utils/class/user.php';
-include '../utils/messages/msg.php';
+include '../utils/autoload.php';
+include '../utils/functions/msg.php';
 
 if(isset($_POST['login'])){
 
