@@ -1,0 +1,14 @@
+@import url("../variables_css/style.css");
+
+#header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 17px;
+    font-size: 14px;
+    border: var(--border);
+}
+#header h2{
+    color: var(--page_color);
+}
